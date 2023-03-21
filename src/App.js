@@ -1,13 +1,12 @@
 import "./App.css";
-import About from "./component/About";
-import Navbar from "./component/Navbar";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
 
 import React, { useState } from "react";
-import Alert from "./component/Alert";
+import Alert from "./components/Alert";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Textform from "./component/Textform";
-import Contact from "./component/Contact";
-import Footer from "./component/Footer";
+import Textform from "./components/Textform";
+import Footer from "./components/Footer";
 
 function App() {
   const [mode, setmode] = useState("light");
@@ -35,28 +34,25 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar title="Word-Formetter" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
+        <Navbar title="TxtAnalyser" mode={mode} toggleMode={toggleMode} />
+        <div className="App-header">
+          <Alert alert={alert} />
 
-        <div className="container">
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <Textform
-                  heading="
-Enter text below to analyse text
-"
-                />
-              }
-            />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/Contact" element={<Contact />} />
-          </Routes>
+          <div className="container">
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <Textform />
+                }
+              />
+              <Route exact path="/about" element={<About />} />
+            </Routes>
+          </div>
         </div>
-        <strong><hr/></strong>
-        <Footer/>
+        <strong><hr /></strong>
+        <Footer />
       </BrowserRouter>
     </>
   );

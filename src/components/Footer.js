@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <>
      
-        <div className="container d-flex justify-content-start my-4">
-          <div className="container">@2020 all Rights Reserved</div>
+        <div className="container d-flex justify-content-start hstack  my-4">
+          <div className="container">@2023 all Rights Reserved by huntingbrothe.com</div>
           <div className="container ">
-            <div className="container d-flex justify-content-end ">
+            <div className="container d-flex justify-content-end hstack  ">
               <strong className="">follow</strong>
               <a href="https://web.whatsapp.com/">
                 <svg

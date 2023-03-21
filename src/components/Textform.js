@@ -45,35 +45,29 @@ export default function Textform(props) {
     <>
       <div className='container  text-black text-opacity-75'  >
 
-        <h1 >{props.heading}</h1>
+        <h1 className='mainHeading' > Analyze text</h1>
 
         <div className="mb-3">
           <textarea className="form-control" value={Text} onChange={OnChange} style={{ backgroundColor: props.mode === 'dark' ? '#121212' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }} id="Textform" rows="8"></textarea>
-          <button className='btn btn-primary my-3 mx-2' onClick={UpperCase}>Convert to Uppercase</button>
-          <button className='btn btn-primary my-3 mx-2' onClick={lowercase}>Convert to Lowercase</button>
-          <button className='btn btn-primary my-3 mx-2' onClick={handleCopy}>copy</button>
-          <button className='btn btn-primary my-3 mx-2' onClick={Clear}>Clear</button>
-          <button className='btn btn-primary my-3 mx-2' onClick={RemoveExtraaSpaces}>Remove Extraa Spaces</button>
-
-
-
+          <button className=' buttons' onClick={UpperCase}>to Upper case</button>
+          <button className=' buttons' onClick={lowercase}> Lower case</button>
+          <button className=' buttons' onClick={handleCopy}>copy to clipboard</button>
+          <button className=' buttons' onClick={Clear}>Clear</button>
+          <button className=' buttons' onClick={RemoveExtraaSpaces}>Remove Extra Spaces</button>
         </div>
       </div>
       <div className='container text-black text-opacity-75' >
-        <h1>Text-Summary</h1>
+        <h1 className='mainHeading'>Text-Summary</h1>
         <div className='container text-opacity-50'  >
           <p class="card-body d-flex"  >
-            <p className='container ' ><strong>Word :  </strong>{Text.split(" ").length - 1}</p>
-            <p className='container' ><strong>Charater: </strong> {Text.length}</p>
-            <p className='container' ><strong>Reading time : </strong>{0.008 * Text.split(" ").length}</p>
-
-
-
-
+            <p className='container subHeading ' >Word :  <span>{Text.split(" ").length - 1}</span></p>
+            <p className='container subHeading ' >Character: <span>{Text.length}</span> </p>
+            <p className='container subHeading ' >Reading time : <span>{0.008 * Text.split(" ").length}</span> </p>
           </p>
+          <hr style={{width:'100%',}}/>
         </div>
-        <h2>Preview</h2>
-        <p  >{Text.length > 0 ? Text : 'Enter your text here to preview'}</p>
+        <h2 className='mainHeading'>Preview</h2>
+        <p className='preview' >{Text.length > 0 ? Text : 'Enter your text here to preview'}</p>
       </div>
     </>
   )
