@@ -5,9 +5,9 @@ import React, { useState } from "react";
 function App() {
   return (
     <>
-      <nav className="navbar">
-        <p>Text analyser</p>{" "}
-      </nav>
+      <div className="navbar">
+        <p>Text analyser</p>
+      </div>
       <TextForm />
     </>
   );
@@ -47,7 +47,7 @@ const TextForm = (props) => {
   return (
     <>
       <div className="container">
-        <div className="mb-3">
+        <div className="">
           <textarea
             className="form-control"
             value={Text}
@@ -74,10 +74,10 @@ const TextForm = (props) => {
           </button>
         </div>
       </div>
-      <div className="container text-black text-opacity-75">
+      <div className="container ">
         <h1 className="mainHeading">Text-Summary</h1>
-        <div className="container text-opacity-50">
-          <p class="card-body d-flex">
+        <div className="container ">
+          <p class="">
             <p className="container subHeading ">
               Word : <span>{Text.split(" ").length - 1}</span>
             </p>
