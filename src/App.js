@@ -5,10 +5,12 @@ import React, { useState } from "react";
 function App() {
   return (
     <>
+    <div>
       <div className="navbar">
         <p>Text analyser</p>
       </div>
       <TextForm />
+      </div>
     </>
   );
 }
